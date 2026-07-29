@@ -9,10 +9,12 @@ public class Movement : MonoBehaviour
 	[SerializeField] float rotationStrength = 100f;
 	Rigidbody rb;
 
+	AudioSource audioSource;
+
 	private void Start()
 	{
 		rb = GetComponent<Rigidbody>();
-
+		audioSource = GetComponent<AudioSource>();
 	}
 
 	private void OnEnable()
@@ -32,6 +34,14 @@ public class Movement : MonoBehaviour
 		if (thrust.IsPressed())
 		{
 			rb.AddRelativeForce(Vector3.up * thrustStrength * Time.fixedDeltaTime);
+			
+			if (!audioSource.isPlaying)
+			{
+				audioSource.Play();
+			}
+		} else
+		{
+			audioSource.Stop();
 		}
 	}
 
@@ -42,13 +52,11 @@ public class Movement : MonoBehaviour
 		if (rotationInput < 0)
 		{
 			ApplyRotation(rotationStrength);
-			Debug.Log("Rotation Left");
 		}
 
 		else if (rotationInput > 0)
 		{
 			ApplyRotation(-rotationStrength);
-			Debug.Log("Rotation Right");
 
 		}
 
@@ -56,6 +64,8 @@ public class Movement : MonoBehaviour
 
 	private void ApplyRotation(float rotationThisFrame)
 	{
+		rb.freezeRotation = true;
 		transform.Rotate(Vector3.forward * rotationThisFrame * Time.fixedDeltaTime);
+		rb.freezeRotation = false;
 	}
 }
