@@ -877,16 +877,28 @@ PrefabInstance:
       value: Dropship_01_Tank_Red
       objectReference: {fileID: 0}
     - target: {fileID: 4594406903787981591, guid: fd05565ebab837245b2e9d5a5787fe88, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.223862
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594406903787981591, guid: fd05565ebab837245b2e9d5a5787fe88, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.223862
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594406903787981591, guid: fd05565ebab837245b2e9d5a5787fe88, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.223862
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594406903787981591, guid: fd05565ebab837245b2e9d5a5787fe88, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.0064774
       objectReference: {fileID: 0}
     - target: {fileID: 4594406903787981591, guid: fd05565ebab837245b2e9d5a5787fe88, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.68
+      value: 9.08
       objectReference: {fileID: 0}
     - target: {fileID: 4594406903787981591, guid: fd05565ebab837245b2e9d5a5787fe88, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.00000080922
       objectReference: {fileID: 0}
     - target: {fileID: 4594406903787981591, guid: fd05565ebab837245b2e9d5a5787fe88, type: 3}
       propertyPath: m_LocalRotation.w
